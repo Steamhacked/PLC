@@ -1,0 +1,76 @@
+C Datatypes:
+  short, int, long
+  float, double
+  char
+
+Void - keyword, (somewhat similar to a datatype), which is used when nothing is returned
+
+Numerical Variables can be Signed and Unsigned
+  Range of possible values of a variable depend on whether the type is signed or "unsigned"
+
+
+Integers are stored as a binary sequence, first bit (left) is sign (1 = negative) (-k = 2^size - k)
+
+Char - is an integer
+  Ranges: [-128; 127] or [0; 250]
+  Special characters (e.g.: new line) require backlash '\'
+
+Floats are represented using:
+  Sign (1 bit)
+  Exponent (8 bits), treat as unsigned integer
+  Mantissa (23 bits)
+
+  Mantissa: M = 1+ i=0 SUM 22: x_i*2^(23-i)
+
+  Float is 6 digits precise, Double is 15 digits precise
+  Problems occur when adding and comparing floats and doubles, since floats and doubles are rather higly precise approximations than the actual values
+
+Printing Variables:
+
+  int a = 3;
+  printf("The value of a is %d/n", a);
+
+  %d - integer
+  %f - floating
+  %c - char
+  add l before for long and u for unsigned
+  %p - pointer
+  %s - string
+  %x - hexadecimal
+  %o - octal
+
+Variables can be casted, e.g.: int b = (int) a; Any type can be casted into any other type, floats are not rounded properly
+
+Arithmetic Operators
+
+  = - assigning a value
+  + - addition
+  - - subtraction
+  * - multiplication
+  / - division
+  % - modulo
+  (dynamically casted when 2 different types are used)
+
+  division of integers ouputs integer division result
+  float/int = double
+
+Comparison Operators
+
+  == - compare
+  != - not equal
+  >, <, >=, <=
+
+Logical Operators
+  ! - not
+  && - and
+  || - or
+
+  C does lazy evaluation
+
+Incrementing/Decrementing
+
+  i++ (--) (incrementing after assigning)
+  ++i (--) (incrementing before assigning)
+  i+=1 (-=)
+
+
