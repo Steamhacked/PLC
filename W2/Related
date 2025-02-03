@@ -57,3 +57,6 @@ void decrement_ref(int a[]){
   a[0]--; -> changes a[]
 }
 
+!!
+Structures passed as function parameters - passed as copies (not references) (as long as there are no '[]', '&' or '*', it will be passed as a copy)
+
