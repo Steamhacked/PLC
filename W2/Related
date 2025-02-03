@@ -1,0 +1,59 @@
+& - Bitwise AND
+| - Bitwise OR
+^ - Bitwise XOR
+~ - Bitwise NOT (1s complement) 
+
+Arrays in C contain a number of variables of the same type, ends with hidden ('\0')
+
+sizeof(array) - returns size of the array in bytes
+
+Array can go for as long as the segment in memory is
+
+If a code reaches beyond arrays bounds, C will not return "Out of bounds" error, therefore it is important to stay within bounds, since the compiler will not do it itself
+
+Structure - similar to an object/class
+
+struct point {
+  float x;
+  float y;
+  float z;
+}
+
+struct point p1;
+p1.x = 0.5;
+
+Alternative:
+
+typedef <type_name> <new_type_name>;
+
+<type_name> type should exist, <new_type_name> -> becomes new alias
+
+typedef struct{
+  float x;
+  float y;
+  float z;
+}
+float_point;
+
+!!
+Struct is at least of a size of sum of each individual components'' sizes, however it can be greater due to padding
+
+Copying vs Referencing:
+
+int a = 1;
+int b = a;
+
+b -> copy of a
+
+int a[] = {1};
+int b[] = a;
+
+b -> alias of a (not a copy)
+
+void decrement_copy(int a){
+  a--; -> does not change a
+}
+void decrement_ref(int a[]){
+  a[0]--; -> changes a[]
+}
+
