@@ -1,0 +1,17 @@
+Pointer - address, pointing to a specific location in memory
+
+There can be any number of pointers, pointing to the same address
+
+Pointers can be moved and changed address pointed to
+
+Declaring pointer:
+
+type * name; (type expected to be found at the address in memory)
+
+void * ptr -> generic pointer
+
+Pointer is a variable containing address, a pointer has an address (usually 64 bits)
+
+int a = 0;
+int * ptr = &a; -> store address of a
+
