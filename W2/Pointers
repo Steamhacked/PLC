@@ -1,4 +1,4 @@
-Pointer - address, pointing to a specific location in memory
+Pointer - address, pointing to a specific location in memory (8 bytes)
 
 There can be any number of pointers, pointing to the same address
 
@@ -14,4 +14,37 @@ Pointer is a variable containing address, a pointer has an address (usually 64 b
 
 int a = 0;
 int * ptr = &a; -> store address of a
+ptr[0] -> access data stored
+*ptr -> access data stored
+ptr -> address itself
+
+Valid Address -> [0; 2^64-1]
+
+void *malloc(size_t size);
+
+int * ptr = (int *)
+malloc(sizeof(int)); -> allocating 4 bytes in memory to store int, value is unknown
+'*' -> operator allowing to access data under address
+
+to free memory:
+
+void free (void *ptr);
+
+int * ptr = (int *) malloc(sizeof(int));
+free(ptr); -> do not do this twice
+
+Pointers of Pointers (Pointerception):
+
+int ** ptr_of_ptr; -> pointer to a pointer to an int (2D array of ints) (array of arrays of pointers)
+
+char ** -> array of strings (max - 12 '*' compiler-dependant)
+
+Changing Size:
+
+void * realloc (void * ptr, size_t size);
+
+
+
+
+
 
