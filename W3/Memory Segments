@@ -1,0 +1,17 @@
+Text/Instructions: 
+  Stores code, (sometimes) constants and pointers
+  Read-Only
+
+Data Segment:
+  Uninitialized (BSS) - stores global and static variables = 0 or no (w/o) values
+  Initialized - stores global and static variables !=0
+
+Stack:
+  Stores execution information, function addresses, local variables: simple types, arrays and structures
+
+Heap:
+  Stores variables
+  Malloc always returns addresses within the heap
+  Variables stored in the heap can be accessed from anywhere (as long as access is known)
+
+
