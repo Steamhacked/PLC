@@ -1,0 +1,22 @@
+string.h - library that assists in string manipulation
+
+String - is an array of chars, (continuous), ending with '\0'
+
+strXXX vs strnXXX:
+e.g.: strcpy & strncpy
+
+strcpy(char * dest, const char * src) -> copies each character from src to dest, until reaches '\0'
+
+strncpy(char * dest, const char * src, size_t n) -> copies first n characters from src to dest
+
+Reliable way to find string length:
+  size_t strlen(const char * str);
+
+Comparison:
+  int strcmp(const char * str1, const char * str2)
+  int strncmp(const char * str1, const char * str2, size_t n)
+  returns: 0 if equal strings, <0 if str1 is less, >0 if str1 is more
+
+Substring:
+  char * strstr(const char * haystack, const char * needle);
+
