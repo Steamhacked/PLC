@@ -1,0 +1,35 @@
+stdio.h -> deals with file creation/writing/reading/deleting
+
+stdout - output file
+stderr - error file
+stdin - input file
+
+printf - returns number of characters printed
+
+int fprintf(FILE *stream, const * char format,...): -> can be used to write content in file
+  printf("%d", 1) <=> fprintf(stdout, "d%", 1)
+
+int sprintf(char *str, const char *format, ...): -> can be used to write a specific string in a char*
+
+int putchar(int char) -> prints one char on stdout
+int puts(const char *str) -> prints one string on stdout
+int putc(int char, FILE *stream) -> ???
+int fputs(const char *str, FILE *stream)
+int fputc(int char, FILE *stream)
+
+int scanf(const char *format,...) - returns number of characters scanned successfully
+int fscanf(FILE *stream, const char *format,...) - same but for any file
+int sscanf(const char *str, const char *format...) - same, but for parsing a char *str string
+
+
+int getchar(void) -> reads 1 character from stdin, returns char as an int (or EOF)
+int getc(FILE *stream) -> same on any file
+int fgetc(FILE *stream) -> same
+
+char *gets(char *str) -> reads string from stdin, returns pointer to str if successful or NULL
+char *fgets(char *str, int n, FILE *stream) -> reads up to n chars in file, stores result in str, returns pointer to str if successful, return NULL if error or end of file reached
+
+function vs f_function:
+f_functions - always a function, function - might be a preprocessed macros
+f_functions are safer to use
+
