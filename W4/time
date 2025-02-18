@@ -1,0 +1,15 @@
+time.h: provides structure to represent time, function to represent and store dates, time computed in processor clocks (ticks) then converted to seconds
+  Macros:
+    CLOCKS_PER_SEC -> ticks per second 
+    struct tm -> stores specific date, including: seconds, minutes, hours, day, month, year
+    time_t -> represents date as unsigned integer/long
+    clock_t -> represents number of ticks passed since the start of the program
+
+    clock_t -> extremely precise, but gets full fast (after around 72 minuteS?)
+    struct tm & time_t -> equally imprecise
+    struct tm -> more comprehendible
+    time_t -> easier to use for mathematic operations
+
+    a lot of formatting for various representations on the output
+
+    
