@@ -1,0 +1,17 @@
+static - global variables/functions, but restricted to the same file, OR
+for local variables -> stored in data segment, value is kept between each function invokation
+
+extern - allows to use a variable/function declared in another file, within the current file
+
+union - similar to struct in most of the ways except storage,
+
+union -> stores elements within the same chunk of memory = size of biggest element stored, each elements beginning address is shared
+
+enum value = {VALUE1, VALUE2, VALUE3};
+enum value myVar = VALUE1;
+
+typedef enum {RED, GREEN, BLUE} color;
+color chosenColor = RED;
+
+every possible value in enum has number assigned (starts from 0)
+
