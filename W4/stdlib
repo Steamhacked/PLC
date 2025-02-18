@@ -1,0 +1,20 @@
+stdlib.h: basic maths, pointer managment, string to number conversion, exit current program
+  atoF: F->i/f/l (int, float, long)
+
+  void exit(int status): status 0 -> successful, 1 -> error (can be replaced by EXIT_SUCCESS or EXIT_FAILURE macros)
+  void abort(void): exit immediately
+  int atexit(void (*func)(void)): func executed when exiting
+
+  void qsort(void *base, size_t nitems, size_t size, int (*compar) (const void *, const void*));
+    base -> array to sort, nitems -> number of elements in array, size -> size of each element, compar -> function comparing 2 void* (elements must be casted to void*), returns int
+
+  int system(const char *string) -> calls to system, allows for terminal commands to be executed, returns value of the program
+
+  int abs(int x) -> absolute value of x
+  long labs (long int x)
+  div_t div(int numer, int denom) -> returns div_t structure, containing .quot -> quotient and .rem -> remainder of division
+  ldiv_t ldiv(long int numer, long int denom)
+
+  int rand(void) -> returns random number between 0 and RAND_MAX (macro)
+  void srand(unsigned int seed) -> seed for RNG
+  
