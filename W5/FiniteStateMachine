@@ -11,7 +11,8 @@ FSM consists of:
   Finite set of inputs/actions
   Starting State
   Transition function
-  Finite Set of Stopping States (subset of states)
+  a) Finite Set of Stopping States (subset of states)
+  b) Output set + Output function
 
 
   
