@@ -6,3 +6,12 @@ FSM can be represented as a graph (state diagram)
 
 Used in wide variety of applications
 
+FSM consists of:
+  Finite set of States
+  Finite set of inputs/actions
+  Starting State
+  Transition function
+  Finite Set of Stopping States (subset of states)
+
+
+  
