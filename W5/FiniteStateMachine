@@ -1,0 +1,8 @@
+Finite State Machine (FSM) - is a mathematical model used to represent systems:
+  that have a finite number of possible states
+  & can transition between these states based on given inputs
+
+FSM can be represented as a graph (state diagram)
+
+Used in wide variety of applications
+
