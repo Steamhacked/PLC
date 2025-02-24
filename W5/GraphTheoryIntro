@@ -1,0 +1,8 @@
+Graph - is a mathematical object, defined by an ordered pair G = (V,E):
+  V = {x..} -> a set of N vertices (nodes)
+  E -> set of edges
+
+Node - is a point in the graph, nodes may contain attributes/features 
+
+Graph may be directed/undirected (directed are more likely to be used in FSM)
+
