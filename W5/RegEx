@@ -1,0 +1,28 @@
+Regular Expressions -> tool for pattern matching & string recognition, can be used to implement FSM (find, extract & manipulate)
+
+Any FSM can be transformed into RegEx & Vice Versa
+
+"a|bc" -> contains a or bc
+"(a|b)c" -> contains ac or bc
+"^" -> start of the string
+"$" -> end of the string
+"\(\)" -> ()
+"*" -> any number of times
+"?" -> epsilon
+"a+" -> "aa*"
+"." -> any
+"\d" -> digit
+"\w" -> [a-zA-Z0-9]
+"\s" -> whitespace characters: tabs, newlines, spaces
+"a{3,7}" -> 3 to 7 repetitions of a
+"\b" -> between word & non-word
+
+(R)>R*>R_1R_2>R_1|R_2
+
+Kleene Theorem -> with 3 fundamental operations & epsilon, anything can be turned into regex or smth
+
+[] - for sets of characters:
+[A-Z], [a-z], [0-0], [acf], [025], [a-zA-Z], [^a-z] -> (no lowercase letters)
+
+
+  
