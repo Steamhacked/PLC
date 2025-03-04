@@ -1,0 +1,52 @@
+file1.c -> file1.i (preprocessing): replaces every line starting with "#", constants, include files, etc.
+
+file1.i -> file1.s (compilation): translates C to Assembly
+
+file1.s -> file1.o (assembly): nearly executable file, except external references
+
+file1.o -> file1.exe (link editor): external references added during links edition
+
+Makefile -> text file called "Makefile", contains compilation instructions or set of directories
+  Makefile rule format: "rule_name: dependency1 dependency2
+  command_to_execute" (tab 2nd line)
+
+student: main.o otherstudent.o
+  gcc main.o otherstudent.o -o student
+
+main.o: main.c
+  gcc -c main.c -o main.o
+
+otherstudent.o: otherstudent.c
+  gcc -c otherstudent.c -o otherstudent.o
+
+To execute -> make / make rule
+
+clean:
+  rm *.o
+make clean -> cleans temp files
+
+Variables can be declared in Makefile:
+
+CFLAGS = -Wall -Werror -ansi -pedantic
+OFILES = main.o otherstudent.o
+
+student: $(OFILES)
+  gcc $(OFILES) -o student $(CFLAGS)
+main.o: main.c
+  gcc -c main.c -o main.o $(CFLAGS)
+clean:
+rm $(OFILES)
+
+Multiple Commands:
+  student: $(OFILES)
+    gcc $(OFILES) -o student $(CFLAGS)
+    rm $(OFILES)
+    ./student
+
+Storing Headers:
+  gcc -c otherstudent.c -o otherstudent.o -Iinclude
+
+Rule make might not work, because it is "dependent" on it's own existence, therefore you should state independence ".PHONY: clean" -> make clean twice, once to update, once to execute
+
+Use GDB/LLDB to debug
+
