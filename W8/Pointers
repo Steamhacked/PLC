@@ -1,0 +1,28 @@
+Modifying ObjectL
+
+void changeVector(Vector2D * vec) {
+  vec->setX(0.0);
+  vec->setY(0.0);
+}
+
+OR
+
+void changeVector(Vector2D &vec) {
+  vec.setX(0.0);
+  vec.setY(0.0);
+}
+
+int main() {
+  Vector2D *v = new Vector2D(3.0f, 4.0f);
+  changeVector(v);
+  cout<< v->getMagnitude() << endl;
+  return 0;
+}
+
+
+new operator -> allocates space on the heap for exactly Vector2D, then calls constructor to generate Vector2D pointed at
+
+delete -> deletes pointer
+
+this-> <=> this. // self. (pointer to current instance)
+
