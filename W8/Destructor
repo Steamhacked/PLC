@@ -1,0 +1,9 @@
+~Type();
+
+.h:
+  ~Vector2D();
+.cpp:
+  Vector2D::~Vector2D(){
+    //nothing
+    cout<<"object deleted"<<endl;
+  }
