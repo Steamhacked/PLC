@@ -1,0 +1,16 @@
+iostream, fstream, ofstream, ifstream
+
+ifstream:  -> works if file exists, > reads from the beginning, > uses getline(), > file is implicitly opened, > need to close the file manually
+ofstream: -> creates new file, > overwrites content, > file is implicitly opened, > need to close the file manually
+
+when ifstream/ofstream is created: a variable ifstream inp; is created > call open(): inp.open("file.txt");
+
+fstream: fstream handler; > handler.open("filename", modes);
+
+ifstream:
+  string line;
+  ifstream myFile("file");
+  while(myFile>>line){
+    cout<<"line: "<<line<<endl;
+  }
+  myFile.close();
