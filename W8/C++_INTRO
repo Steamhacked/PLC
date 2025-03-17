@@ -1,0 +1,54 @@
+Compiled with g++, .cpp .h (sometimes .hpp) files, sligtly less complex memory management, may include C code
+
+printf("") <=> std::cout << "";
+
+using namespace std; -> 
+
+<< -> string concatenation
+
+endl -> '\n'
+
+.h Contains:
+  Class Declarations,
+  Function prototypes,
+  Enumerations,
+  Typedef
+
+#ifndef NAME ... #endif -> prevents adding already existing class
+#define VECTOR2D_H
+
+class Vector2D{
+  float x; //-> implicitly (by default) private
+  float y;
+  public: // -> public (everything below)
+    float i;
+    float j;
+}; 
+
+Constructor~ (in header):
+
+class Vector2D{
+  public:
+    Vector2D(float x, float y);
+  private:
+    float m_x;
+    float m_y;
+}; 
+
+Using Constructor (in cpp):
+Vector2D::Vector2D(float x, float y){
+  m_x = x;
+  m_y = y; // -> accesed using m_y (not name.m_y)
+}
+int main(){}
+
+methods:
+
+.h:
+double get_magnitude();
+
+.cpp:
+double Vector2D::get_magnitude(){
+  return(sqrt(m_x*m_x+m_y*m_y));
+}
+
