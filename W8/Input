@@ -1,0 +1,16 @@
+int a;
+float b;
+string c;
+cin >> a >> b >> c;
+cout<<a<<b<<c;
+
+cin<<string; -> reads until 1st space
+
+5.62test -> a = 5; b = 0.62; c = test;
+
+5
+0.62
+eblans? nahui
+
+5 0.62 test
+
