@@ -1,0 +1,30 @@
+Struct vs Class:
+  Same, except: Default visibility?
+  Struct -> Public, Class -> Private (everything)
+
+Function Overloading -> Allowed as long as Number of Inputs OR Input Types are different
+
+Assigning Values:
+  int a = 5;
+  int b(6);
+  int c = int(7); // Works for most of the types
+
+Reducing # of Lines of Constructor[cpp]:
+  Vector2D::Vector2D(float x, float y) : m_x(x), m_y(y) {} // Direct mapping of variables to parameters
+
+Empty Constructor:
+.h:
+  Vector2D();
+.cpp:
+  Vector2D::Vector2D(float x, float y) : m_x(0), m_y(0) {}
+
+Creating Instances:
+  Vector2D v1;
+  Vector2D v2 = Vector2D();
+  Vector2D v3(5.0, 6.0);
+
+Copying:
+  Vector2D v4 = v1;
+  General Prototype:
+    Type(const Type &object); //object - to be copied
+
