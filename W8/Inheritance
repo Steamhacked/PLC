@@ -1,0 +1,17 @@
+class Vector3D: public Vector2D{
+  public:
+    Vector3D(float x, float y, float z);
+  private:
+    float m_z;
+};
+
+Constructor .cpp:
+
+Vector3D::Vector3D(float x, float y, float z): Vector2D(x, y), m_z(z){}
+
+Private classes cannot be accessed from parent class, 
+
+Overriding:
+Parent::method(){/*overriding*/}
+
+(C++ lacks "super" keyword, allows for multiple inheritance)
