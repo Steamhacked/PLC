@@ -1,0 +1,19 @@
+Class that contains at least one virtual Method
+
+virtual void print () {cout<<"Shape.print()"<<endl;} // in class Shape
+void print () {cout<<"Rectangle.print()"<<endl;} // in class Reclangle : public Shape
+
+Not Exaclty Abstract: Shape.print() will compile and output, since there is implementation;
+
+Pure Abstract:
+
+virtual void print() = 0; // 0 means -> no implementation, pointer to NULL
+-> Shape.print() is now producing error and Shape is a proper abstract class 
+
+Rectangle r = Rectangle(4); // Can we do Shape r = Rectangle(4); instead?
+Shape *ptr_to_r = &r;
+ptr_to_r->print();
+
+Alternative: 
+
+Make constructor of the abstract class protected/private
