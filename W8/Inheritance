@@ -24,3 +24,5 @@ c.Parent::function1();
 Same with Attributes:
 
 Parent::m_x
+
+Prevent Ambiguity by a Proper Naming Convention
