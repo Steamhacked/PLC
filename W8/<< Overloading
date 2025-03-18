@@ -1,0 +1,11 @@
+.h:
+
+friend ostream& operator<<(ostream& os, const Vector2D& obj); -> should be inside class, though it looks like a method, it is a function
+
+.cpp:
+
+ostrea& operator<<(ostream& os, const Vector2D& obj){
+    os << "(" << obj.m_x << "," << obj.m_y << ")";
+    return os;
+}
+
