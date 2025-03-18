@@ -1,0 +1,5 @@
+In C++:
+
+Private - Within the Same Class
+Public - Free Access
+Protected - Within the Same class & any child class
