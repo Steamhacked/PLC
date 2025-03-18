@@ -1,0 +1,6 @@
+Operators can be overloasded (a lot of them)
+
+Object a: a+5; a is 1st -> method; cout << a; -> cout 1st -> function;
+
+Each will have specific: input, return type, const, expected behavior & returned values 
+
