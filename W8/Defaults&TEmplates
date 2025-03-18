@@ -1,0 +1,22 @@
+Default Values:
+int sum (int a=0, int b = 0){...}
+
+Order matters, no type-matching
+
+Default Values always start from right to left,
+
+Templates:
+
+char sum (char a, char b) {return a+} // then we repeat exact same thing except change datatype
+
+template <typename T> T sum (T a, T b) {return a+b}...
+
+cout << sum<int>(1,2)<<" "<< sum<float>(2.1f, 3.0f) << endl;
+
+Two Types:
+
+template <typename T> T sum (T a, T b) {return a+b}...
+
+C++20:
+
+auto sum (auto a, auto b) { return a+b;} 
