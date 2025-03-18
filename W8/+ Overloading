@@ -1,0 +1,9 @@
+.h:
+Vector2D operator+ (Vector2D &obj);
+
+.cpp:
+Vector2D Vector2D::operator+
+(Vector2D &obj) {
+  float newx = this->m_x + obj.m_x;
+  float newy = this->m_y + obj.m_y;
+}
