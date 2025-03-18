@@ -15,3 +15,12 @@ Overriding:
 Parent::method(){/*overriding*/}
 
 (C++ lacks "super" keyword, allows for multiple inheritance)
+
+Multiple Inheritance Ambuguity, if there are 2 parents that have function with the same name:
+
+c.function(); will produce error
+c.Parent::function1();
+
+Same with Attributes:
+
+Parent::m_x
