@@ -1,0 +1,28 @@
+Strings exist in c++
+Concatenated with + operator
+Changing substring works: e.g.: str[0] = 'h' -> will not cause segfault
+.size() instead of strlen()
+
+bool -> boolean type (true/false)
+
+Arrays:
+
+int array[3] = {10, 20, 30};
+int *array2 = new int[3];
+delete[] must be used on array2
+
+SizeOf array is still not completely reliable, size must be tracked manually
+
+const:
+
+int x = 10;
+conts int *ptr = &x; // value at address is constant, address is not
+ptr++; // works
+
+int* const ptr = &x; // address is constant, value at address can be modified
+
+const int* const ptr; //both cannot be modified
+
+int Vector2D::changeX(float x) const {...} -> const guarantees that nothing is modified inside within the instance -> v1.changeX(3.0f) -> doesnt work
+
+const int Vector2D::changeX(float x) {...} -> const return type, whatever is returned is treated as const
