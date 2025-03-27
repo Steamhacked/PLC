@@ -32,3 +32,8 @@ Non-exhaustive list of techniques:
   Introduce delimeters
   Introduce associativity rules
 
+Dangling Else(or IF) problem -> designing proper CFG for if...else expressions
+
+Associativity: Left/Right, Left-associativity -> left-to-right, Right-associativity -> right-to-left
+
+
