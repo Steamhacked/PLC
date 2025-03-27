@@ -1,0 +1,34 @@
+Context free grammar -? system used to generate and describe set of strings based on a specific set of syntax rules
+
+Terminals -> basic symbols in a language that cannot be further divided or transformed (chemistry example: digits, element symbols)
+
+Non-terminals -> can be decomposed and transformed, syntactic pattern or intermediate structure 
+
+Start symbol -> special non-terminal symbolf, from which the derivation of strings beings
+
+Production rules -> transformations for non-terminals; written in form : "A->B" e.g.: 'compound->molecule; molecule-> element...'
+
+Any symbol in production rule denoted by a word is non-terminal 'Molecule' vs 'H'
+
+Derivation -> sequence of production rules that begin at the start symbol, rewrites non-terminals using production rules, until oly terminals are left
+
+Syntax Validity & CFGs Theorem: string of terminal symbols has a valid syntax according to a given CFG iff there exists derivation for the given CFG that
+produces result of string x
+
+Programming Languages -> Syntax-based -> Can utilize CFGs
+
+For given derivation, there exists a derivation tree, with root at the start symbol and leafs being terminals
+
+CFG is said to have an ambiguity if an expression can lead to multiple different derivations, ambiguity is not good
+
+There exists no algorithm to check CFG for ambiguity, it is proven to be an undecidable problem (Halting problem), there are however practices to create 
+non-ambiguous  CFGs
+
+Not all CFGs can be made non-ambiguous, ambiguous grammars often appear more concise and straightforward, however they do result in problems
+
+Non-exhaustive list of techniques: 
+  Rewrite grammar entirely
+  Introduce precedence
+  Introduce delimeters
+  Introduce associativity rules
+
