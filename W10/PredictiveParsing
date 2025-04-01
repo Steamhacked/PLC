@@ -1,0 +1,15 @@
+Predictive Parsing -> use remaining input to predict which production rule to use; Can be in linear time, can be table-driven. Cons: Not all grammars can be accepted, trade expressiveness for speed
+
+Predictive Parsing only works if CFG allows to predict by looking ahead (not all CFGs)
+
+Predictive Parser Naming Convention: L/R, L/R, (number), e.g.: LR(3) Left-to-Right Scanning, Rightmost Derivation, look at 3 next symbols when predicting
+
+LL1 Table: >Rows - which non-terminal to transform; >Cols - what is the next terminal in x that must match this non-terminal; >Cell - production rule / what to replace with
+
+Empty cells -> syntax errors, useful, was not available with LeftMostBFS
+
+How to generate LL(1) parsing table, given CFG? 
+
+Sets:
+
+First set of non-terminal symbol A, denoted F(A) -> set of terminal symbols that can appear as the first symbol in any string derivde from that non-terminal
