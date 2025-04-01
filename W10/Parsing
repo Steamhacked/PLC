@@ -1,0 +1,23 @@
+Types: Top-Down & Bottom-Up
+
+Top-Down Challenges: >Begins with no information (start symbol, which matches every program), >In general, we cannot know which productions to apply, best we can do is guess and backtrack if wrong,
+
+if we have to guess, how?
+
+1) Treat as Graph Search Problem, a pair of nodes are connected iff one of the nodes can be transformed into another using production rules. Find if graph of all possible applications of CFG rules admits
+a node that corresponds to the given string
+
+Problem: No way to tell invalid nodes
+
+Reduce branching factor: 
+
+Leftmost Derivation -> always try to transform the leftmost non-terminal first
+Rightmost Derivation -> vice versa
+
+Leftmost BFS problem: left-recursive production rules cause exponential time complexity
+
+DFS -> Does not work as good as BFS, hwy? Enters infinite loop with left-recursive production rule
+
+You cannot get rid of left-recursive production rules, as they establish associativity
+
+What can we do?
