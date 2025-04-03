@@ -1,0 +1,23 @@
+Top-Down reverse: start from string x to verify syntax and work back to a start symbol
+
+Bottom-Up parsing can deal with non-LL(k) grammars and can handle left/right recursive grammars
+
+Identify substring beta in z, suth that A->beta is a production rule of our CFG
+
+Bottom-Up traces like top-down rightmost derivation, but in reverse
+
+The right substring should consist only of terminal symbols, left substring could have both, dividing point can be marked
+
+Bottom-up parser will attempt to revert the string by using only two possible actions:
+  Shifting: move separator one step to right
+  Reducing: apply inverse production rule at the right of the left end string
+
+Left Substring can be implemented by a stack
+Top of the stack denoted by separator
+Shifting pushes a terminal symbol on the stack
+Reducing using a production rule A->B pops all the symbols in B off the otp of the stack and then pushes a non-terminal Symbol A on the stack to replace all the symbols in B
+
+How to decide when to shift or reduce?
+
+Build FSM:
+  States have shift-reduce(rule)-accept-reject actions
