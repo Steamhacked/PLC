@@ -1,1 +1,3 @@
 LL(1) -> if the CFG is left-recursive, there will be multiple production rules for the same case which leads to FIRST-FIRST conflicts, therefore LL(1) is not effective for all CFGs
+
+Some languages cannot use even LL(k) (C)
