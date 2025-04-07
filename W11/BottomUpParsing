@@ -1,0 +1,47 @@
+FSM for parsers is figured out by special generators (e.g.: bison, ANTLR)
+
+. -> progress bar showing whther reduction is possible or not (arbitrary symbol)
+
+A -> .BCD none of the rhs have been discovered
+A -> BCD. 'BCD' was discovered, transformation - allowed (not necessary, sometimes you should not reduce even if you can)
+
+There is always finite number of symbols on the RHS of the production rule, therefore there are finite positions of the dot
+
+Number of production rules is finite as well
+
+The 2 statements above can be used to describe states for an FSM
+
+LR(0) items -> all the possible rhs formulas of all the production rules and thheir variations of dot positions
+
+LR(1) items -> all the possible configurations of tuple form A -> alpha.Bbeta, a; A -> non-terminal, alpha & beta -> strings of terminals and non-terminals, B -> non-terminal, a -> lookahead symbol 
+(all possible terminals in the CFG or the end of string symbol)
+
+LR(1) items -> can be used as states for an FSM
+
+Transition Logic Rules:
+1) Shifting -> if there is an LR(1) A->alpha.Xbeta,s used as the current state and X is a terminal, add a transition to the state containing A->alphaX.beta,s using symbol X (use rule #1 on all possible pairs)
+2) GoTO -> if there is an LR(1) A->alpha.Xbeta,s used as the current state, and X is a non-terminal, add a transition to the state containing A->alphaX.beta,s on symbol X (use rule #2 on all possible pairs)
+3) Closure -> if there is an LR(1) A->alpha.Xbeta,s used as the current state, and X is a non-terminal, for each production X->gamma and each terminal a in FIRST*(betas), add X->.gamma,a to the current state if not already there
+4) Start State -> Start is the one that contains S->.E,$ where S is the start symbol and $ is the end-of-input marker
+
+Last Step -> assign a parser action to every FSM state
+
+LR(1) Finite State Automata used by LR(1) parser
+
+Rules to Assign Actions:
+1) Shift when FSM stops at LR(1) item A->alpha.Xbeta,s (X is terminal)
+2) Reduce when FSM stops at LR(1) item A->alpha.,s
+3) Accept when the FSM stops at LR(1) item S->E.,$ and the next input is end-marker
+4) Error when non-existent transition required (likely invalid input)
+
+Shift-Reduce Conflict when FSM cannot decide whether to shift or reduce, (ambiguity) can lead to different parse trees for the same syntactically valid input string, in those cases use something else (probably LR(k))
+
+Reduce-Reduce Conflict when there is a state that could use more than one reductions with different production rules, (once again LR(k))
+
+Hence, too close to natural language -> too much ambiguity -> too difficult to implement
+
+C is LR(1)
+C++ is not LR(1)
+Python since v3.9 is PEG (family of LL(1)) (technically python has a better CFG than C) [it will still be slower, since it's interpreted] 
+
+That is merely top of the iceberg
