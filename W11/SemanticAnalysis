@@ -1,0 +1,12 @@
+Semantic Analysis -> final step, ensures that the program has a well-defined meaning, should catch remaining errors
+
+Scope Problems -> variable defined after called for the first time, variable defined in a function called outside, variable name defined twice, etc. (requires context, meaning CFG likely won't catch those)
+
+Type Problems -> operation attempting to combine two invalid types together, operation attempts unfeasible typecasting, etc.
+
+These errors need context and values, may require and involve computation
+
+A set of sematinc rules for scoping and types needs to be defined, additional checks must be performed after parsing, checks can implemented as "if-else" conditionals
+
+Abstract Syntax Tree produced by the syntax analysis -> cornerstone of solving semantic problems and conducting checks
+
