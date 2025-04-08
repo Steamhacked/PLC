@@ -1,0 +1,33 @@
+Scope of an identifier is the portion of the program in which the identifier is accessible
+
+Static scope -> program code dependent (runtime independent) (stricter, quicker)
+Dynamic scope -> may depend on the execition of the program, decided during runtime (flexible)
+
+Symbol Table -> keeps track of identifiers, represents mapping from a name to the reference, can be a hash table
+
+Can be implemented as a stack of maps: each map corresponds to a scope, stack allows for easy enter & exit operations
+Operations:
+Push -> enter a new scope
+Pop -> leave a scope, discarding all declarations in it
+Insert symbol -> add a new entry to the current scope
+Lookup symbol -> find what an identifier name corresponds to
+Remove symbol -> remove entry from the current scope
+
+"LEGB" rule -> Local Enclosing Global Built-In
+
+Spaghetti Stack with different levels of scope, when variable is referenced, search in the following order:
+Local -> within function
+Enclosing -> in any enclosing function (inside->out)
+Global -> defined at the top level
+Built-In -> built-in names in python (e.g.: print())
+
+(C won't allow that, unless there is #define (like built-in), but even then it's not in the symbol table, but rather during preprocessing, block scope only)
+
+Block Scope -> prevents misscoping, reduces possible ambiguities, less forgiving code
+LEGB Scope -> flexible, allows for closures, functions that remember where they were created, enabling some new techniques, can lead to unintended side effects from variable in outer scope changing, can 
+nake it harder to reason the code since variable can be accessed/modified in different scopes
+
+Single-Pass vs Multi-Pass Compilers:
+
+Single-Pass -> combine scanning, parsing, semantic analysis and code generations in one shot (more limited, quicker, no tolerance to any issues)
+Multi-Pass -> rescan input multiple times, may go back and redo (e.g.: syntactically incorrect part of code that is never used/executed) [need-based]
