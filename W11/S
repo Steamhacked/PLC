@@ -25,4 +25,6 @@ Type Inference: set of pre-established type rules, given preconditions we can in
 
 
 
-Compile Error Recovery
+Compile Error Recovery -> attempt to continue semantic analysis despite type errors
+
+
