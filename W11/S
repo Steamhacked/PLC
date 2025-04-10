@@ -1,0 +1,28 @@
+Strong vs Weak type systems:
+Not binary -> spectrum
+Strong -> stricter
+Weak -> more flexible, implicit type conversions happen
+
+Implicit vs Explicit -> automatically inferred vs explicitly stated
+
+C -> allows to sum int with char, int with float
+Python -> allows to sum int with float, not straightforward with int and char, need unicode (weaker though)
+Haskell -> refuses to operate if types do not exactly match
+
+Type Errors: 
+
+Explicit conversion or operator called, that is not supported by the type
+Implicit conversion that might resolve in the issue above
+
+Static vs Dynamic type checking:
+
+Static -> at compile-time
+Dynamic -> at run-time
+
+No Type Checking -> everything processed in binary (not a good idea)
+
+Type Inference: set of pre-established type rules, given preconditions we can infer postconditions
+
+
+
+Compile Error Recovery
