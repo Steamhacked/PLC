@@ -1,0 +1,15 @@
+Common Subexpression Elimination:
+If there is an expression repeated multiple times in variable initialization, replace with the 1st variable that was initialized using given expression
+e.g.: v1 = a op b; v2 = a op b; -> v1 = a op b; v2 = v1;
+
+Copy Propagation:
+If there is a variable initialized to a given constant, after which another variable is initialized to that variable, replace with initialization using given constant instead of the variable
+e.g.: v1 = a; v2 = v1; -> v1 = a; v2 = a;
+
+Updated Copy Propagation:
+Replace variable with its value
+
+Dead Code Elimination:
+Remove any unused blocks of code (variables, unreachable code, redundant operations)
+Steps: 1) Identify live variables (liveness analysis): study whether or not a variable is later reused and when is it safe to remove it from code;
+2) Remove dead variables; 3) Rinse and Repeat
