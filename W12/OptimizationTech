@@ -1,3 +1,5 @@
+Local:
+
 Common Subexpression Elimination:
 If there is an expression repeated multiple times in variable initialization, replace with the 1st variable that was initialized using given expression
 e.g.: v1 = a op b; v2 = a op b; -> v1 = a op b; v2 = v1;
@@ -23,3 +25,11 @@ Short-Circuiting: x = a & b = false? replace x = false, delete b
 Constant Folding: x = 4*5 -> x = 20
 
 Many others
+
+Global Optimization:
+
+Function inlining -> replacing function call with the actual function code
+Eliminating Dead Functions -> remove dead functions
+Loop unrolling -> repeating the loop body multiple times to reuce the overhead
+Loop fusion -> combining loops that have the same iteration space, enumerate/zip style
+Loop-invariant motion -> moving code that does not change within the loop outside the loop
