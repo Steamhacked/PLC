@@ -13,3 +13,13 @@ Dead Code Elimination:
 Remove any unused blocks of code (variables, unreachable code, redundant operations)
 Steps: 1) Identify live variables (liveness analysis): study whether or not a variable is later reused and when is it safe to remove it from code;
 2) Remove dead variables; 3) Rinse and Repeat
+
+There is no strict precedence order between above 3 operations
+
+More:
+
+Arithmetic Simplification, e.g.: replace *2^n or /2^n with bitshifting
+Short-Circuiting: x = a & b = false? replace x = false, delete b
+Constant Folding: x = 4*5 -> x = 20
+
+Many others
