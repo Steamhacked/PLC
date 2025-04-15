@@ -1,0 +1,11 @@
+Transforming 3-address code into machine code:
+
+Instruction selection -> procedure during which compiler chooses specific machine code instructions to use to implement each operation in the program (equivalent CPU operations)
+
+Instruction ordering/scheduling -> procedure during which order of instructions is rearranged to improve performance 
+
+Basic Block identification -> compiler identifies basic blocks in the TAC code
+
+Resource allocation -> how to decide which variables to prioritize and assign to registers and which to keep in other memory and do so without giving hints to compiler
+
+At any point a register should contain only one variable, several variables can be assigned to the same register as long as they are used not at the same time, 
